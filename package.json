@@ -1,6 +1,6 @@
 {
   "name": "datacookbook-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A thin wrapper for datacookbook.com's api's",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,6 @@
   "homepage": "https://github.com/PatrickMurphy/Datacookbook-api#readme",
   "dependencies": {
     "is-object": "^1.0.1",
-    "merge-util": "^0.3.1"
+    "absorb": "^0.1.0"
   }
 }

@@ -1,5 +1,5 @@
 var isObject = require('is-object'),
-		merge = require('merge-util'),
+		absorb = require('absorb'),
 		http = require('http');
 
     
@@ -36,7 +36,7 @@ module.exports = {
         options = options || {};
         
         options.initialized = false;
-        merge(this.APIConfig, options);
+        absorb(this.APIConfig, options);
         
         this.APIConfig.initialized = true;
     },
@@ -53,7 +53,7 @@ module.exports = {
             throw 'Tokens not currently supported';
         } else {
             // Add the user & password to the object
-            merge(params, this.APIConfig.user);
+            absorb(params, this.APIConfig.user);
         }
         
         params.outputFormat = this.APIConfig.requestURL.outputFormat;
@@ -100,7 +100,7 @@ module.exports = {
         };
         
         // add any filters
-        merge(params, filters);
+        absorb(params, filters);
         
         // pass to get
         this.getRequest(params, 'list', callback);
@@ -117,7 +117,7 @@ module.exports = {
         };
         
         // add any filters
-        merge(params, options);
+        absorb(params, options);
         
         // pass to get
         this.getRequest(params, 'list', callback);
