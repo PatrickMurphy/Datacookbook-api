@@ -11,7 +11,7 @@ A thin api wrapper providing methods to get data from the different datacookbok 
 
 Require the installed package
 
-  var DataCookbook = require('datacookbook-api');
+	var DataCookbook = require('datacookbook-api');
 	
 Choose `datacookbook.init(settings_obj)` or `datacookbook.connect(username, password, subdomain);`
 	
