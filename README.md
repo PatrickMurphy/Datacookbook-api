@@ -9,15 +9,24 @@ A thin api wrapper providing methods to get data from the different datacookbok 
 
 ## Usage
 
+Require the installed package
+
   var DataCookbook = require('datacookbook-api');
+	
+Choose `datacookbook.init(settings_obj)` or `datacookbook.connect(username, password, subdomain);`
 	
 	DataCookbook.init({user:{un: 'myUsername', pw: 'myPassword'}, requestUrl: {subdomian: 'mySubdomain'}});
 	
+Or you can use the connect method, note `datacookbook.connect(user_obj, subdomain)` is also available
+
+	DataCookbook.connect('user', 'password', 'subdomain');
+  
+All the API Methods use callbacks
 	var defaultCallback = function (response) {
 		console.log(response);
 	},
 	defaultParameters = {};
-	
+
 	DataCookbook.termList(defaultParameters, defaultCallback);
 	
 	DataCookbook.tearmSearch('searchQuery', defaultCallback);
@@ -51,10 +60,9 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Planned Features
 	
-	Setup function to make init optional, would require only username password and subdomain
-	Token Server API integration
+	Authentication Token Login API integration
 
 ## Release History
-
-* 1.1.0 Change dependency to self developed merge package `npm absorb`
+* 1.2.0 Add connect method for easier instantiation 
+* 1.1.0 Change dependency to self developed merge package `npm absorb` & added documentation folder
 * 1.0.0 Initial release
