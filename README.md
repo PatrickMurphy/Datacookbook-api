@@ -36,7 +36,7 @@ A thin api wrapper providing methods to get data from the different datacookbok 
 		},
 		requestURL: {
 			protocol: 'https://',
-			subdomain: 'centralwashingtonu', // Set this as your institutions
+			subdomain: 'collegename', // Set this as your institutions subdomain
 			baseURL: 'datacookbook.com',
 			resourcePath: '/institution/terms/',
 			resource: 'lookup',
@@ -56,4 +56,5 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
-* 0.1.0 Initial release
+* 1.1.0 Change dependency to self developed merge package `npm absorb`
+* 1.0.0 Initial release
