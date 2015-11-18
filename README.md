@@ -22,6 +22,7 @@ Or you can use the connect method, note `datacookbook.connect(user_obj, subdomai
 	DataCookbook.connect('user', 'password', 'subdomain');
   
 All the API Methods use callbacks
+
 	var defaultCallback = function (response) {
 		console.log(response);
 	},
